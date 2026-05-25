@@ -1,0 +1,200 @@
+EXPLORATORY DATA ANALYSIS (EDA)
+================================
+
+What is EDA?
+→ Process of analyzing raw data to understand patterns, relationships, and insights before modeling.
+→ Helps identify data quality issues and inform feature engineering decisions.
+
+---
+
+STEP 1: LOAD & INSPECT DATA
+- Load dataset (CSV, JSON, Database, etc.)
+- Check shape: How many rows and columns?
+- Display first few rows: df.head()
+- Check data types: df.dtypes
+- Get basic info: df.info()
+
+STEP 2: CHECK FOR MISSING VALUES
+- Identify missing data: df.isnull().sum()
+- Calculate percentage of missing data
+- Decide: Remove, fill, or impute missing values
+- Example: If 50% missing → Remove. If 5% missing → Fill with mean/median.
+
+MISSING VALUES - DETAILED:
+──────────────────────────
+Code Examples:
+  df.isnull().sum()           → Count missing in each column
+  df.isnull().sum() / len(df) → Percentage of missing
+  df.dropna()                 → Remove rows with any missing
+  df.fillna(0)                → Fill missing with 0
+  df.fillna(df.mean())        → Fill with mean value
+  
+Handling Missing Values:
+  1. Drop → Remove rows/columns with missing (if <5% missing)
+  2. Fill Forward/Backward → For time-series data
+  3. Mean/Median Imputation → For numerical data
+  4. Mode Imputation → For categorical data
+  5. Prediction → Use ML to predict missing values
+  
+When to Use:
+  Drop:    Less than 5% missing
+  Mean:    Numerical, normally distributed
+  Median:  Numerical with outliers
+  Mode:    Categorical data
+  Predict: Important feature, lots of data
+
+STEP 3: STATISTICAL SUMMARY
+- Describe numerical features: df.describe()
+- Find: Mean, median, min, max, std deviation
+- Identify outliers and unusual values
+- Example: If salary has max of $10 Million but average is $50k → Outlier!
+
+STEP 4: UNIVARIATE ANALYSIS (Individual variables)
+- Analyze each feature independently
+- Visualizations: Histogram, Box plot, Distribution plots
+- For categorical: Count plots, Pie charts
+- Questions: What's the range? Is it normally distributed? Many outliers?
+
+STEP 5: BIVARIATE ANALYSIS (Two variables)
+- Analyze relationships between two variables
+- Visualizations: Scatter plot, Line plot, Correlation heatmap
+- Correlation: How strongly related are features?
+- Example: Does house size correlate with price?
+
+STEP 6: MULTIVARIATE ANALYSIS (Multiple variables)
+- Analyze relationships among multiple variables
+- Correlation matrix: Which features are correlated?
+- Heatmaps: Visualize all correlations at once
+- PCA/Clustering: Group similar features
+
+STEP 7: IDENTIFY OUTLIERS
+- Statistical methods: IQR, Z-score
+- Visualization: Box plots show outliers
+- Decide: Remove outliers or keep them (domain-dependent)
+
+STEP 8: DATA DISTRIBUTION
+- Check if features are normally distributed
+- Skewness: Is data left/right skewed?
+- Kurtosis: How peaked is the distribution?
+- Importance: Helps decide which algorithms to use
+
+STEP 9: CATEGORICAL DATA ANALYSIS
+- Count unique values: df['column'].nunique()
+- Value counts: How many of each category?
+- Cardinality: Too many categories? Consider grouping.
+- Imbalance: Unequal distribution? May need resampling.
+
+VALUE COUNTS - DETAILED:
+────────────────────────
+What is Value Count?
+→ Counts how many times each unique value appears in a column
+→ Essential for understanding categorical data distribution
+
+Code Examples:
+  df['column'].value_counts()              → Count each category
+  df['column'].value_counts(normalize=True) → Proportion (%)
+  df['column'].value_counts().plot()       → Visualize counts
+  df['column'].value_counts().head(10)     → Top 10 categories
+  
+Example Output (Titanic Dataset):
+  Survived
+  0    549    → 549 didn't survive
+  1    342    → 342 survived
+  
+  Pclass
+  3    491    → 491 passengers in 3rd class
+  1    216    → 216 in 1st class
+  2    184    → 184 in 2nd class
+
+Why Value Count Matters:
+✓ Identify class imbalance (important for classification)
+✓ Find most common categories
+✓ Detect data entry errors (unexpected values)
+✓ Guide feature encoding decisions
+✓ Understand data distribution
+
+Class Imbalance Example:
+  Email Classification:
+  Not Spam: 9500    → 95%
+  Spam:     500     → 5%
+  
+  Problem: Model might predict "Not Spam" for everything!
+  Solution: Use weighted loss, oversampling, or undersampling
+
+STEP 10: DOCUMENT FINDINGS
+- Key insights discovered
+- Data quality issues found
+- Recommendations for preprocessing
+- Features that might be important
+
+---
+
+COMMON EDA TECHNIQUES:
+======================
+
+Numerical Data:
+✓ Histogram → Distribution of values
+✓ Box plot → Outliers and quartiles
+✓ Density plot → Smooth distribution
+✓ Q-Q plot → Normality test
+
+Categorical Data:
+✓ Bar plot → Count of categories
+✓ Pie chart → Proportion of categories
+✓ Count plot → Frequency distribution
+
+Relationships:
+✓ Scatter plot → Two numerical variables
+✓ Correlation heatmap → All variable relationships
+✓ Pair plot → All pairwise relationships
+
+---
+
+KEY QUESTIONS TO ASK DURING EDA:
+================================
+
+1. What is the data shape and structure?
+2. Are there missing or corrupt values?
+3. What is the distribution of each variable?
+4. Are there outliers? Are they important or errors?
+5. Which features are correlated?
+6. Which features might be predictive?
+7. What are the class distributions (for classification)?
+8. Are there imbalances in data?
+9. What preprocessing is needed?
+10. What insights might drive feature engineering?
+
+---
+
+EXAMPLE: HOUSE PRICE DATASET EDA
+=================================
+
+Step 1: Load → 1000 houses, 15 columns (size, bedrooms, price, etc.)
+Step 2: Missing → Price has 2% missing, drop those rows
+Step 3: Summary → Average price $300k, size ranges 500-5000 sq ft
+Step 4: Univariate → Price is normally distributed, size slightly right-skewed
+Step 5: Bivariate → Size and price highly correlated (0.85)
+Step 6: Multivariate → Location, size, age are key price predictors
+Step 7: Outliers → One mansion worth $5M (outlier but keep it)
+Step 8: Distribution → Price needs log transformation for better predictions
+Step 9: Categorical → Location has 50 unique values
+Step 10: Insights → Size is most important feature, nearby houses similar prices
+
+---
+
+TOOLS FOR EDA:
+===============
+Python: Pandas, NumPy, Matplotlib, Seaborn, Plotly
+R: ggplot2, dplyr, Base R graphics
+Tools: Tableau, Power BI, Google Data Studio
+
+---
+
+WHY EDA MATTERS:
+================
+✓ Prevents modeling mistakes from bad data
+✓ Reveals patterns to improve model performance
+✓ Guides feature engineering decisions
+✓ Saves time by avoiding wrong approaches
+✓ Builds intuition about the data
+✓ Communicates insights to stakeholders

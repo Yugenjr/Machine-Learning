@@ -1,0 +1,40 @@
+STEPS IN MACHINE LEARNING MODEL DEVELOPMENT
+==============================================
+
+1. PROBLEM DEFINITION
+Define what you want to solve. Identify input & output, set objectives.
+
+2. DATA COLLECTION
+Gather relevant data from various sources (databases, APIs, sensors, etc.).
+
+3. EXPLORATORY DATA ANALYSIS (EDA)
+Analyze data to understand patterns, distributions, correlations, missing values.
+
+4. DATA PREPROCESSING / CLEANING
+Handle missing values, remove outliers, fix errors, standardize formats.
+
+5. FEATURE SELECTION & ENGINEERING
+Select important features, create new features, remove redundant ones.
+
+6. SPLIT THE DATASET
+Divide data into training (70%), validation (15%), testing (15%) sets.
+
+7. MODEL SELECTION
+Choose appropriate algorithm (Regression, Classification, Clustering, etc.).
+
+8. MODEL TRAINING
+Train the selected model on training data to learn patterns.
+
+9. MODEL EVALUATION
+Evaluate model performance on validation data using metrics (accuracy, precision, etc.).
+
+10. HYPERPARAMETER TUNING
+Adjust model parameters to improve performance.
+
+11. MODEL TESTING / VALIDATION
+Test final model on test data to check real-world performance.
+
+---
+
+SUMMARY:
+Define → Collect → Analyze → Clean → Engineer → Split → Select → Train → Evaluate → Tune → Test

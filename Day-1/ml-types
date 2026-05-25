@@ -1,0 +1,30 @@
+TYPES OF MACHINE LEARNING
+==========================
+
+1. SUPERVISED LEARNING
+- Learn from labeled data (input + output known)
+- Two types:
+  * Regression: Predict numbers (house price, temperature)
+  * Classification: Predict categories (spam/not spam, cat/dog)
+- Example: Predicting house price based on size and location
+
+
+2. UNSUPERVISED LEARNING
+- Learn from unlabeled data (only input, no output)
+- Main tasks:
+  * Clustering: Group similar data (customer segments)
+  * Anomaly Detection: Find unusual patterns (fraud detection)
+- Example: Grouping customers by buying behavior
+
+
+3. REINFORCEMENT LEARNING
+- Learn by trial and error with rewards/penalties
+- Agent learns optimal behavior through interaction
+- Example: Game AI, robots learning to walk, self-driving cars
+
+
+QUICK COMPARISON:
+================
+Supervised    → With labeled data, predict output
+Unsupervised  → Without labels, find patterns
+Reinforcement → Learn through reward/penalty feedback
