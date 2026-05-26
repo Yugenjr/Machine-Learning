@@ -1,0 +1,39 @@
+# Data Preprocessing
+
+Data preprocessing transforms raw data into a format suitable for machine learning models. It's broader than cleaning and includes transformations for better model performance.
+
+## Key Steps:
+
+### 1. **Data Cleaning**
+- Handle missing values, duplicates, and outliers (see Data Cleaning for details)
+
+### 2. **Feature Encoding**
+- Convert categorical variables to numerical format
+- Methods: One-Hot Encoding, Label Encoding, Ordinal Encoding
+
+### 3. **Feature Scaling**
+- Normalize (0-1) or standardize (mean=0, std=1) numerical features
+- Prevents high-magnitude features from dominating the model
+
+### 4. **Feature Engineering**
+- Create new features from existing data
+- Combine, transform, or extract relevant information
+- Example: Extract day/month/year from date
+
+### 5. **Data Splitting**
+- Divide into training (70%), validation (15%), and test sets (15%)
+- Ensures unbiased model evaluation
+
+### 6. **Handling Class Imbalance**
+- Address imbalanced datasets using SMOTE, oversampling, or undersampling
+- Prevents models from biasing toward majority class
+
+### 7. **Feature Selection**
+- Remove irrelevant or redundant features
+- Improves model efficiency and reduces overfitting
+
+## Difference from Cleaning:
+**Cleaning**: Fixes data quality issues | **Preprocessing**: Transforms data for ML readiness
+
+## Impact:
+Quality preprocessing directly improves model accuracy, speed, and generalization.

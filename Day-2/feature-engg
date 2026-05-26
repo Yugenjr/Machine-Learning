@@ -1,0 +1,46 @@
+# Feature Engineering
+
+Feature engineering is the process of creating new features or transforming existing ones to improve machine learning model performance. It's a critical skill that separates good models from great ones.
+
+## Core Techniques:
+
+### 1. **Feature Creation**
+- Combine existing features (e.g., Age from Birth Date)
+- Create ratios or differences (e.g., Price/Area)
+- Extract components (e.g., Day, Month, Year from timestamps)
+
+### 2. **Binning/Discretization**
+- Convert continuous variables into categorical bins
+- Example: Age → Age Groups (0-18, 18-35, 35-60, 60+)
+
+### 3. **Polynomial Features**
+- Generate higher-order features (X², X³)
+- Captures non-linear relationships
+
+### 4. **Domain Knowledge Application**
+- Use business expertise to create meaningful features
+- Example: Customer Lifetime Value for churn prediction
+
+### 5. **Interaction Features**
+- Multiply or combine features to capture relationships
+- Example: Experience × Education Level
+
+### 6. **Text/NLP Features**
+- TF-IDF, word embeddings, sentiment scores for text data
+
+### 7. **Statistical Features**
+- Rolling averages, standard deviation, skewness
+- Useful for time-series data
+
+### 8. **Feature Selection**
+- Remove low-variance or highly correlated features
+- Use correlation analysis, mutual information, or model-based methods
+
+## Best Practices:
+- Start simple, then add complexity
+- Validate feature importance
+- Avoid data leakage
+- Document feature logic for reproducibility
+
+## Impact:
+Well-engineered features can improve model accuracy by 10-30% without changing the algorithm.

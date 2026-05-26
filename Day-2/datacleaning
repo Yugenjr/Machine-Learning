@@ -1,0 +1,38 @@
+# Data Cleaning
+
+Data cleaning is the process of preparing raw data for analysis by identifying and correcting errors, inconsistencies, and missing values. It's a crucial step that significantly impacts model accuracy.
+
+## Key Components:
+
+### 1. **Handling Missing Values**
+- Identify missing data (NaN, NULL, empty strings)
+- Strategies: Remove rows/columns, fill with mean/median/mode, or use imputation techniques
+
+### 2. **Removing Duplicates**
+- Detect and eliminate duplicate records
+- Keep data integrity by identifying which duplicates to remove
+
+### 3. **Outlier Detection & Treatment**
+- Identify unusual values that don't fit the pattern
+- Options: Remove, cap, or transform outliers
+
+### 4. **Data Type Conversion**
+- Ensure columns have correct data types (numeric, categorical, datetime)
+- Convert strings to appropriate formats
+
+### 5. **Handling Inconsistencies**
+- Standardize formatting (case sensitivity, spacing)
+- Fix naming inconsistencies across records
+- Reconcile conflicting information
+
+### 6. **Feature Scaling**
+- Normalize or standardize numerical features to similar ranges
+- Important for algorithms sensitive to feature magnitude
+
+### 7. **Validation**
+- Cross-check data integrity
+- Verify relationships between variables
+- Ensure data quality meets requirements
+
+## Importance:
+Poor quality data leads to poor predictions. Typically, 70-80% of ML project time is spent on data cleaning and preprocessing.
