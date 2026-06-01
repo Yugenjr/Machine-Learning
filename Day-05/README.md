@@ -1,0 +1,1 @@
+starting the next video of supervised learning . i'll keep going !!.
