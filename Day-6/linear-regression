@@ -1,0 +1,18 @@
+# Linear Regression
+
+Linear regression models a linear relationship between input(s) X and a continuous target y:
+
+ŷ = w·X + b
+
+- Goal: find parameters w,b that minimize mean squared error (MSE).
+- Closed form: normal equation (for small/clean datasets).
+- Iterative: gradient descent updates parameters using gradients of the MSE.
+
+Assumptions: linearity, independence, homoscedasticity, (optional) normal residuals.
+
+Metrics: RMSE, MAE, R². Use residual plots to check fit and violations.
+
+Practical tips: scale features for gradient methods, handle outliers, apply L1/L2 regularization when overfitting.
+
+Use cases: price prediction, demand forecasting, simple trend estimation.
+
