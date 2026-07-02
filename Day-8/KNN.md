@@ -13,4 +13,4 @@ define k --> calculate distance (euclidean) --> sort distances --> compare diff 
 
 He emphasizes that keeping K as an odd number is important to avoid ties during the majority vote. Since there is no single "perfect" K, he introduces the concept of experimentation and cross-validation to find the most effective value for your specific dataset
 
-timeline:  2:43:00
+timeline:  2:43:00 

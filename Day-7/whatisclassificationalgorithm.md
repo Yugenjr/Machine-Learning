@@ -48,3 +48,13 @@ Always validate with holdout test sets.
 Document experiments and random seeds.
 Start simple, iterate with validation.
 Classification remains a cornerstone of ML.
+
+
+# Classification Algorithms
+
+# Regression
+
+Ridge and Lasso regression 
+dt regressor
+linear
+polynomial 
